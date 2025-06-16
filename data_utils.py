@@ -5,7 +5,10 @@ import csv
 import matplotlib.pyplot as plt
 import fooof
 import pickle
-
+import statsmodels.api as sm
+import natsort
+import scipy.stats as stats
+import scipy
 
 with open("G:\\Drive condivisi\\AnalisiSegnaliEeg\\HD EEG\\Crisi_HDEEG\\ICA_pruned_reduced\\plot_indeces_organization", 'rb') as file:
     new_indices = pickle.load(file)
@@ -203,6 +206,7 @@ def compare_slopes(y1, y2):
         "p_value": p_value
     }
 ############################################################################################
+
 
 ############################################################################################
 def compute_avg_std_se(nested_list):
